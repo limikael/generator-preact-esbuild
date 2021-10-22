@@ -1,0 +1,16 @@
+{
+	"name": "<%= name %>",
+	"version": "0.0.1",
+	"description": "",
+	"scripts": {
+		"build": "esbuild src/<%=name%>.jsx --minify --jsx-factory=h --jsx-fragment=Fragment --bundle --outfile=res/<%=name%>.bundle.js --inject:src/utils/preact-shim.js --loader:.png=dataurl --loader:.svg=dataurl --target=es2017",
+		"dev": "esbuild src/<%=name%>.jsx --jsx-factory=h --jsx-fragment=Fragment --bundle --outfile=res/<%=name%>.bundle.js --inject:src/utils/preact-shim.js --loader:.png=dataurl --loader:.svg=dataurl --target=es2017 --servedir=res",
+		"start": "npm run dev"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"esbuild": "^0.12.17",
+		"preact": "^10.5.14"
+	}
+}
