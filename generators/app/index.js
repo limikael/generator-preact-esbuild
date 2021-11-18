@@ -67,11 +67,6 @@ module.exports = class extends Generator {
       this.templatePath('src/utils/preact-shim.js'),
       this.destinationPath('src/utils/preact-shim.js')
     );
-
-    this.fs.copy(
-      this.templatePath('jsconfig.json'),
-      this.destinationPath('jsconfig.json')
-    );
   }
 
   install() {
